@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Container } from "@/components/Container";
 import heroImg from "../../public/img/hero.png";
 import parttida from "../../public/img/parttida.png";
+import Link from "next/link";
 import React from "react";
 
 
@@ -21,13 +22,10 @@ export const Hero = () => {
             </p>
 
             <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
-              <a
-                href="https://web3templates.com/templates/nextly-landing-page-template-for-startups"
-                target="_blank"
-                rel="noopener"
-                className="px-8 py-4 text-lg font-medium text-center text-white bg-teal-700 rounded-md ">
-                Iniciar
-              </a>
+              
+            <Link href="/chat" className="px-8 py-4 text-lg font-medium text-center text-white bg-teal-700 rounded-md">
+            Iniciar
+            </Link>
               <a
                 href="https://github.com/vmaarcos"
                 target="_blank"
@@ -46,6 +44,7 @@ export const Hero = () => {
                 </svg>
                 <span> Veja no meu Github</span>
               </a>
+           
             </div>
           </div>
         </div>

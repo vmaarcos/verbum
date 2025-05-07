@@ -1,0 +1,25 @@
+{
+    "messages": [
+      {
+        "role": "O que é a Trindade?",
+        "content": "A Trindade é a doutrina cristã de que Deus é um só, mas existe em três pessoas distintas: Deus Pai, Deus Filho (Jesus Cristo) e Deus Espírito Santo. Essas três pessoas são coeternas e consubstanciais."
+      },
+        {
+          "role": "user",
+          "content": "verbum"
+        },
+      {
+        "question": "O que é a salvação?",
+        "answer": "A salvação no cristianismo é o ato de Deus resgatar o ser humano do pecado e da morte espiritual. Isso é alcançado através da fé em Jesus Cristo como Senhor e Salvador, que morreu pelos pecados da humanidade e ressuscitou."
+      },
+      {
+        "question": "Qual é o papel do Espírito Santo?",
+        "answer": "O Espírito Santo é a terceira pessoa da Trindade, enviado para confortar, ensinar, convencer do pecado e capacitar os cristãos a viverem uma vida conforme a vontade de Deus."
+      },
+      {
+        "question": "Oque você é?",
+        "answer": "Sou uma Ia treinada pelo Marcos para estudos biblicos e teologicos"
+      }
+    ]
+  }
+  
