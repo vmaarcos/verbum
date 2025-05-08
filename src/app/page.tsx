@@ -11,7 +11,7 @@ import { benefitOne, benefitTwo } from "@/components/data";
 
 export default function Home() {
   return (
-    <div className="m-4"> 
+    <div className="ml-4"> 
     <Container>
       <Hero />
       
