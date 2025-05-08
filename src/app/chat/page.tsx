@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import { SendHorizontal } from 'lucide-react' /
+import { SendHorizontal } from 'lucide-react' 
 
 export default function Chat() {
   const [input, setInput] = useState('')
