@@ -17,7 +17,6 @@ export default function Chat() {
     scrollToBottom()
   }, [messages])
 
-
   const sendMessage = async () => {
     if (!input.trim()) return
 
