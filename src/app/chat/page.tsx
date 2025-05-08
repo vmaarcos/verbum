@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import { SendHorizontal } from 'lucide-react' // Corrigido para o nome certo
+import { SendHorizontal } from 'lucide-react' /
 
 export default function Chat() {
   const [input, setInput] = useState('')
@@ -9,28 +9,22 @@ export default function Chat() {
   const [loading, setLoading] = useState(false)
   const chatEndRef = useRef<HTMLDivElement | null>(null)
 
-  // Função para rolar até o final do chat
   const scrollToBottom = () => {
     chatEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }
 
-  // Reagir ao novo estado de mensagens
-  useEffect(() => {
-    scrollToBottom()
-  }, [messages])
 
-  // Função para enviar a mensagem
   const sendMessage = async () => {
     if (!input.trim()) return
 
-    // Adiciona a mensagem do usuário
+
     const userMessage = { role: 'user', content: input }
     setMessages((prev) => [...prev, userMessage])
     setInput('')
     setLoading(true)
 
     try {
-      // Envia o pedido para a API (ajuste para sua rota real)
+
       const res = await fetch('/api/gemini', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -43,7 +37,7 @@ export default function Chat() {
 
       const data = await res.json()
       const aiMessage = { role: 'assistant', content: data.response }
-      setMessages((prev) => [...prev, aiMessage]) // Adiciona a resposta do assistente
+      setMessages((prev) => [...prev, aiMessage]) 
     } catch (error) {
       console.error('Erro ao chamar API:', error)
       setMessages((prev) => [
