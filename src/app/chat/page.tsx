@@ -12,6 +12,10 @@ export default function Chat() {
   const scrollToBottom = () => {
     chatEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }
+  
+  useEffect(() => {
+    scrollToBottom()
+  }, [messages])
 
 
   const sendMessage = async () => {
