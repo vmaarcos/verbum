@@ -11,6 +11,7 @@ import { benefitOne, benefitTwo } from "@/components/data";
 
 export default function Home() {
   return (
+    <div className="m-4"> 
     <Container>
       <Hero />
       
@@ -49,5 +50,6 @@ export default function Home() {
       <Faq />
       <Cta />
     </Container>
+    </div>
   );
 }
