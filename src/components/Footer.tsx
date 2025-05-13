@@ -4,7 +4,7 @@ import React from "react";
 import { Container } from "@/components/Container";
 
 export function Footer() {
-  const navigation = ["Início", "Estudos Bíblicos", "Recursos Teológicos", "Cursos", "Sobre"];
+  const navigation = ["Início", "Estudos Bíblicos", "Verbum AI chat", "Cursos", "Sobre"];
   const legal = ["Termos", "Privacidade", "Legal"];
   return (
     <div className="relative">
@@ -14,7 +14,7 @@ export function Footer() {
             <div>
               {" "}
               <Link
-                href="/"
+                href="/chat"
                 className="flex items-center space-x-2 text-2xl font-medium text-teal-700 dark:text-gray-100"
               >
                 <Image
