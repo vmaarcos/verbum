@@ -7,9 +7,9 @@ import { Disclosure } from "@headlessui/react";
 export const Navbar = () => {
   const navigation = [
     { label: "Início", href: "/" },
-    { label: "Estudos Bíblicos", href: "/estudos" },
+    { label: "Temas Biblicos", href: "/estudos" },
     { label: "Verbum AI", href: "/chat" },
-    { label: "Cursos", href: "/cursos" },
+    { label: "Estudos Biblicos", href: "/cursos" },
     { label: "Sobre", href: "/sobre" },
   ];
 
