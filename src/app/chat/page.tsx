@@ -12,10 +12,11 @@ export default function Chat() {
   const scrollToBottom = () => {
     chatEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }
-  
+  const chatTopRef = useRef<HTMLDivElement | null>(null);
+
   useEffect(() => {
-    scrollToBottom()
-  }, [messages])
+    chatTopRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
 
   const sendMessage = async () => {
     if (!input.trim()) return
@@ -55,8 +56,11 @@ export default function Chat() {
   return (
     <main className="flex flex-col h-screen bg-gradient-to-b from-zinc-900 to-zinc-800 text-white">
       <div className="flex flex-col flex-1 max-w-2xl w-full mx-auto p-4">
-        {/* Área de mensagens com rolagem */}
-        <div className="flex-1 overflow-y-auto space-y-4 px-1 sm:px-2 py-4 max-h-[80vh]">
+
+        <div className="flex-1 overflow-y-auto space-y-4 px-1 sm:px-2 py-4 max-h-[80dvh]">
+          <div ref={chatTopRef} />
+          {/*<div ref={chatEndRef} />*/}
+
           {messages.map((msg, i) => (
             <div
               key={i}
@@ -69,13 +73,12 @@ export default function Chat() {
               {msg.content}
             </div>
           ))}
+
           {loading && (
             <p className="text-sm text-gray-400 italic">Escrevendo resposta...</p>
           )}
-          <div ref={chatEndRef} />
         </div>
 
-        {/* Área de entrada do chat */}
         <div className="flex items-center border border-zinc-700 bg-zinc-800 rounded-xl p-3 mt-2">
           <input
             value={input}
