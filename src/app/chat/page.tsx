@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { SendHorizontal } from 'lucide-react' 
+import ReactMarkdown from 'react-markdown';
 
 export default function Chat() {
   const [input, setInput] = useState('')
@@ -70,7 +71,10 @@ export default function Chat() {
                   : 'mr-auto bg-zinc-700 text-gray-100'
               }`}
             >
-              {msg.content}
+              <ReactMarkdown >
+                {msg.content}
+              </ReactMarkdown>
+
             </div>
           ))}
 
