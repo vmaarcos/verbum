@@ -31,7 +31,7 @@ const LoginPage: NextPage = () => {
       </Head>
       <Container className="flex flex-col items-center justify-center min-h-screen">
         <div className="w-full max-w-md p-8 space-y-6 rounded-lg shadow-md">
-          <h1 className="text-2xl font-bold text-center text-gray-900">
+          <h1 className="text-2xl font-bold text-center text-emerald-600">
             Login
           </h1>
           <form className="space-y-6" onSubmit={handleLogin}>
