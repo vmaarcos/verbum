@@ -1,10 +1,12 @@
 "use client";
 import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
-import Image from "next/image"
+import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
+import { useUser } from "@/context/UserContext"; // Import useUser
 
 export const Navbar = () => {
+  const { userName, logout } = useUser(); // Access user context
   const navigation = [
     { label: "Início", href: "/" },
     { label: "Temas Biblicos", href: "/estudos" },
@@ -31,12 +33,23 @@ export const Navbar = () => {
         </Link>
 
         {/* Right side buttons */}
-        <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
+        <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2 items-center"> {/* Added items-center for alignment */}
           <ThemeChanger />
-          <div className="hidden mr-3 lg:flex nav__item">
-            <Link href="/chat" className="px-6 py-2 text-white bg-teal-700 rounded-md md:ml-5">
-              Comece Agora
-            </Link>
+          <div className="hidden mr-3 lg:flex nav__item items-center"> {/* Added items-center for alignment */}
+            {userName ? (
+              <>
+                <span className="px-4 py-2 text-gray-800 dark:text-gray-200">Olá, {userName}</span>
+                <button
+                  onClick={logout}
+                  className="px-6 py-2 text-white bg-red-600 rounded-md md:ml-2 hover:bg-red-700"> {/* Adjusted margin */}
+                  Logout
+                </button>
+              </>
+            ) : (
+              <Link href="/login" className="px-6 py-2 text-white bg-teal-700 rounded-md md:ml-5">
+                Login
+              </Link>
+            )}
           </div>
         </div>
 
@@ -62,9 +75,20 @@ export const Navbar = () => {
                       {item.label}
                     </Link>
                   ))}
-                  <Link href="/chat" className="w-full px-6 py-2 mt-3 text-center text-white bg-teal-700 rounded-md lg:ml-5">         
-                    Comece Agora
-                  </Link>
+                  {userName ? (
+                    <>
+                      <span className="w-full px-4 py-2 -ml-4 text-gray-800 dark:text-gray-200 text-center">Olá, {userName}</span>
+                      <button
+                        onClick={logout}
+                        className="w-full px-6 py-2 mt-3 text-center text-white bg-red-600 rounded-md hover:bg-red-700">
+                        Logout
+                      </button>
+                    </>
+                  ) : (
+                    <Link href="/login" className="w-full px-6 py-2 mt-3 text-center text-white bg-teal-700 rounded-md lg:ml-5">
+                      Login
+                    </Link>
+                  )}
                 </>
               </Disclosure.Panel>
             </>

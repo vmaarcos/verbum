@@ -5,6 +5,7 @@ import "./globals.css";
 
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { UserProvider } from "@/context/UserContext";
 
 
 
@@ -24,10 +25,11 @@ export default function RootLayout({
     <html lang="pt" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class">
-          <Navbar />
-          <div>{children}</div>
-          <Footer />
-          
+          <UserProvider>
+            <Navbar />
+            <div>{children}</div>
+            <Footer />
+          </UserProvider>
         </ThemeProvider>
       </body>
     </html>
