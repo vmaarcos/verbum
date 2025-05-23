@@ -38,7 +38,7 @@ const LoginPage: NextPage = () => {
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-gray-700">
+                className="block text-sm font-medium text-emerald-600">
                 Name
               </label>
               <input
@@ -55,7 +55,7 @@ const LoginPage: NextPage = () => {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700">
+                className="block text-sm font-medium text-emerald-600">
                 Email
               </label>
               <input
@@ -73,7 +73,7 @@ const LoginPage: NextPage = () => {
             <div>
               <label
                 htmlFor="password"
-                className="block text-sm font-medium text-gray-700">
+                className="block text-sm font-medium text-emerald-600">
                 Password
               </label>
               <input
@@ -91,7 +91,7 @@ const LoginPage: NextPage = () => {
             <div>
               <button
                 type="submit"
-                className="flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                className="flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-emerald-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                 Login
               </button>
             </div>
