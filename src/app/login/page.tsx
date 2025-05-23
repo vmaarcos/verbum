@@ -30,7 +30,7 @@ const LoginPage: NextPage = () => {
         <meta name="description" content="Página de login para o Verbum" />
       </Head>
       <Container className="flex flex-col items-center justify-center min-h-screen">
-        <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
+        <div className="w-full max-w-md p-8 space-y-6 rounded-lg shadow-md">
           <h1 className="text-2xl font-bold text-center text-gray-900">
             Login
           </h1>
