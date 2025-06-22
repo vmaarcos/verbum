@@ -7,8 +7,7 @@ export default function CursosPage() {
     <div className="max-w-5xl mx-auto space-y-12 px-4 py-8">
       <h1 className="text-3xl font-bold text-center">Estudos Temáticos</h1>
     <p className="max-w-3xl mx-auto text-center">
-    Estude temas bíblicos e históricos de forma fácil e visual, buscando aprender para estar sempre pronto para explicar com calma e respeito por que você tem esperança. 
-    <mark>“Antes, santificai Cristo, como Senhor, em vossos corações; e estai sempre preparados para responder com mansidão e temor a qualquer que vos pedir a razão da esperança que há em vós.” (1 Pedro 3:15)</mark>
+    Estude temas bíblicos e históricos de forma fácil e visual, <mark>“Antes, santificai Cristo, como Senhor, em vossos corações; e estai sempre preparados para responder com mansidão e temor a qualquer que vos pedir a razão da esperança que há em vós.” (1 Pedro 3:15)</mark>
     </p>
 
       {/* Grid container para responsividade */}
