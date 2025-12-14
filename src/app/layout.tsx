@@ -5,9 +5,6 @@ import "./globals.css";
 
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { UserProvider } from "@/context/UserContext";
-
-
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,11 +22,9 @@ export default function RootLayout({
     <html lang="pt" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class">
-          <UserProvider>
-            <Navbar />
-            <div>{children}</div>
-            <Footer />
-          </UserProvider>
+          <Navbar />
+          <div>{children}</div>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
