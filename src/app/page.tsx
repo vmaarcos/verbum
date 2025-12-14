@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { SectionTitle } from "@/components/SectionTitle";
@@ -12,23 +11,9 @@ import { Cta } from "@/components/Cta";
 import { benefitOne, benefitTwo } from "@/components/data";
 
 export default function Home() {
-  const [userName, setUserName] = useState<string | null>(null);
-
-  useEffect(() => {
-    const storedName = localStorage.getItem("userName");
-    if (storedName) {
-      setUserName(storedName);
-    }
-  }, []);
-
   return (
     <div className="ml-4">
       <Container>
-        {userName && (
-          <div className="mb-4 text-center text-lg font-medium text-emerald-600">
-            Olá, {userName}! Bem-vindo de volta ao Verbum.
-          </div>
-        )}
 
         <Hero />
 
